@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiceFragment"
+    android:background="@color/Black">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:background="@drawable/randomie"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:text="@string/randomie"
+        android:textColor="@color/Black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="41dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/Black"
+        android:src="@drawable/back"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/dice1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_marginTop="188dp"
+        android:src="@drawable/dice1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/dice2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_marginTop="188dp"
+        android:src="@drawable/dice2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <android.widget.Button
+        android:id="@+id/roll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginBottom="148dp"
+        android:background="@drawable/rectangle_white"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:letterSpacing="0"
+        android:text="@string/roll"
+        android:textAllCaps="false"
+        android:textColor="@color/Black"
+        android:textSize="25sp"
+        app:cornerRadius="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

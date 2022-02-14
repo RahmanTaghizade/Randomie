@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Randomie" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/Black</item>
+        <item name="colorPrimaryVariant">@color/Black</item>
+        <item name="colorOnPrimary">@color/Black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/Black</item>
+        <item name="colorSecondaryVariant">@color/Black</item>
+        <item name="colorOnSecondary">@color/Black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="splashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_image</item>
+        <item name="android:statusBarColor">@color/Black</item>
+    </style>
+</resources>

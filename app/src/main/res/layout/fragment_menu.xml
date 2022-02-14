@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuFragment"
+    android:background="@color/Black">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:background="@drawable/randomie"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:text="@string/randomie"
+        android:textColor="@color/Black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="0dp" />
+
+
+    <ImageButton
+        android:id="@+id/options_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/Black"
+        android:src="@drawable/options"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:columnCount="1"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints">
+
+        <android.widget.Button
+            android:text="@string/number"
+            android:textColor="@color/Black"
+            android:textSize="25sp"
+            android:letterSpacing="0"
+            android:textAllCaps="false"
+            android:layout_marginBottom="25dp"
+            android:id="@+id/number_button"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/number_button"/>
+
+        <android.widget.Button
+            android:textColor="@color/Black"
+            android:text="@string/password"
+            android:textAllCaps="false"
+            android:letterSpacing="0"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
+            android:id="@+id/password_button"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/password_button"/>
+
+        <android.widget.Button
+            android:text="@string/coin"
+            android:letterSpacing="0"
+            android:textColor="@color/Black"
+            android:textAllCaps="false"
+            android:textSize="25sp"
+            android:layout_marginBottom="25dp"
+            android:id="@+id/coin_button"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/coin_button"/>
+
+        <android.widget.Button
+            android:text="@string/dice"
+            android:letterSpacing="0"
+            android:textAllCaps="false"
+            android:textSize="25sp"
+            android:textColor="@color/Black"
+            android:layout_marginBottom="25dp"
+            android:id="@+id/dice_button"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dice_button"/>
+
+        <android.widget.Button
+            android:text="@string/magic_ball"
+            android:letterSpacing="0"
+            android:textAllCaps="false"
+            android:textSize="25sp"
+            android:textColor="@color/Black"
+            android:layout_marginBottom="25dp"
+            android:id="@+id/magic_button"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/magic_ball"/>
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
