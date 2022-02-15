@@ -1,5 +1,8 @@
 package com.example.randomie
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -79,6 +82,35 @@ class OptionsFragment : Fragment() {
         val back_button = view.findViewById<ImageButton>(R.id.back_button)
         back_button.setOnClickListener{
             findNavController().navigate(R.id.action_optionsFragment_to_menuFragment)
+        }
+
+        val like = view.findViewById<ImageButton>(R.id.like)
+        val share = view.findViewById<ImageButton>(R.id.share)
+        share.setOnClickListener{
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, "Download \"Randomie\" app! - https://www.figma.com")
+                type = "text/plain"
+            }
+
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            startActivity(shareIntent)
+        }
+
+        like.setOnClickListener{
+            val uri: Uri = Uri.parse("market://details?id=com.womboai.wombodream")
+            val goToMarket = Intent(Intent.ACTION_VIEW, uri)
+            // To count with Play market backstack, After pressing back button,
+            // to taken back to our application, we need to add following flags to intent.
+            goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY or
+                    Intent.FLAG_ACTIVITY_NEW_DOCUMENT or
+                    Intent.FLAG_ACTIVITY_MULTIPLE_TASK)
+            try {
+                startActivity(goToMarket)
+            } catch (e: ActivityNotFoundException) {
+                startActivity(Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://play.google.com/store/apps/details?id=com.womboai.wombodream")))
+            }
         }
 
         return view
